@@ -27,7 +27,6 @@ export default function changePasswordModal() {
       }
     })
     .then((res)=>{
-     console.log(res);
      if (res.data.message==='success'){
       localStorage.setItem('userToken', res.data.token)
       toast.success("Password changed successfully");
@@ -35,7 +34,6 @@ export default function changePasswordModal() {
      
     })
     .catch((err)=>{
-      console.log(err);
       toast.error("can’t change password");
 
     })

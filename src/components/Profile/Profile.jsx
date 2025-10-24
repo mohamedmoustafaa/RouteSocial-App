@@ -20,7 +20,6 @@ export default function profile() {
     queryFn:getUserData,
     select: (data)=> data?.data?.user,
   })
-  console.log(data);
   
 
   return <>

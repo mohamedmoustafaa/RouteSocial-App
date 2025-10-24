@@ -8,7 +8,6 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { userLogin, setUserLogin } = useContext(userContext);
 
-  // 🔹 دالة لجلب بيانات المستخدم
   function getUserData() {
     return axios.get(`https://linked-posts.routemisr.com/users/profile-data`, {
       headers: {
@@ -17,15 +16,12 @@ export default function Navbar() {
     });
   }
 
-  // 🔹 استخدم React Query لجلب البيانات
   const { data, isLoading, isError } = useQuery({
     queryKey: ["userData"],
     queryFn: getUserData,
     select: (res) => res?.data?.user,
   });
 
-  // 🔹 عرض اسم وصورة المستخدم في الـ console (اختياري)
-  console.log("👤 User Data:", data?.name, data?.email, data?.photo);
 
   return (
     <nav className="border-gray-200 dark:bg-gray-900">

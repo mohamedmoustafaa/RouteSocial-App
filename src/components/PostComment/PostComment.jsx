@@ -11,7 +11,6 @@ export default function ({comment}) {
 
   let{commentCreator , createdAt , content, _id } = comment;
 
-  console.log(comment);
   
   return (
   <div>

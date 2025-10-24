@@ -18,7 +18,6 @@ export default function Updatecomment({id}) {
     const {register, handleSubmit} = form
   
     async function handleUpdateComments(values){
-      console.log(values);
        
   
     axios.put(`https://linked-posts.routemisr.com/comments/${id.id}`, values, {
@@ -29,7 +28,6 @@ export default function Updatecomment({id}) {
     })
   
     .then((res) => {
-      console.log(res);
       if(res.data.message === "success"){
       toast.success('Update is Success')
       queryClient.invalidateQueries({queryKey : ["userPosts"]})
@@ -38,11 +36,9 @@ export default function Updatecomment({id}) {
       
     })
     .catch((err) =>{
-      console.log(err);
        toast.error('Update is failed')
   
     })
-        // console.log("TOKEN:", localStorage.getItem("userToken"));
   
   }
   

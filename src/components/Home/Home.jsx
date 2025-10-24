@@ -23,7 +23,6 @@ export default function Home() {
 
   //     if (res.length) {
   //     setposts(res);
-  //     console.log(res);
   //    }
      
     

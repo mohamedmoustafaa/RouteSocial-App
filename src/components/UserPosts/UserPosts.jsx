@@ -21,7 +21,6 @@ export default function UserPosts({id}) {
     queryKey:["userPosts"],
     queryFn: getUserPosts,
   })
-  console.log(data?.data?.posts);
   
     const queryClient = useQueryClient()
   
@@ -40,7 +39,6 @@ export default function UserPosts({id}) {
       }
     })
     .catch((err)=>{
-      console.log(err.response.data.error);
       toast.error(err.response.data.error)
     })
     

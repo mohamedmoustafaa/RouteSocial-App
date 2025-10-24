@@ -61,7 +61,7 @@ axios.post(`https://linked-posts.routemisr.com/users/signup` , values)
 if (res.data.message === "success") {
   // to login 
 
-  setisLoadind(false) //عشان يرجع تاني لحالته بعد عرض النتيجة
+  setisLoadind(false)  
 
   navigate("/login")
 
@@ -71,10 +71,8 @@ if (res.data.message === "success") {
  
 })
 .catch((err)=>{
-  //console.log(err.response.data.error);
 
-  setisLoadind(false) //عشان يرجع تاني لحالته بعد عرض النتيجة
-
+  setisLoadind(false) 
   setapiError(err.response.data.error)
 
 

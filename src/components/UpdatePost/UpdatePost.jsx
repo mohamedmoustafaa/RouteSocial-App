@@ -20,8 +20,6 @@ export default function UpdatePost({id}) {
   const {register, handleSubmit} = form
 
   async function handleUpdate(values){
-  //console.log(value.body);
-  //console.log(value.image[0]);
   let myData = new FormData()
   myData.append(`body`,values.body)
   myData.append(`image`,values.image[0])
@@ -34,7 +32,7 @@ export default function UpdatePost({id}) {
   })
 
   .then((res) => {
-    console.log(res);
+    
     if(res.data.message === "success"){
     toast.success('Update is Success')
     queryClient.invalidateQueries({queryKey : ["userPosts"]})
@@ -43,11 +41,10 @@ export default function UpdatePost({id}) {
     
   })
   .catch((err) =>{
-    console.log(err);
+    
      toast.error('Update is failed')
 
   })
-      console.log("TOKEN:", localStorage.getItem("userToken"));
 
 }
 

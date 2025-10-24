@@ -24,7 +24,6 @@ export default function CreatePosts() {
         },
       });
 
-      console.log("✅ Response:", response.data);
 
       if (response?.data?.message === "success") {
         toast.success("Post Shared Successfully!");

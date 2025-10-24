@@ -51,11 +51,9 @@ if (res.data.message === "success") {
   }
 
   localStorage.setItem("userToken", token);
-  console.log("✅ Token saved:", token);
 
   setuserLogin(token);
 
-  // تأخير بسيط لضمان الحفظ قبل الانتقال
   setTimeout(() => {
     navigate("/");
   }, 200);
@@ -63,7 +61,6 @@ if (res.data.message === "success") {
 
 })
 .catch((err)=>{
-  //console.log(err.response.data.error);
 
   setisLoadind(false) //عشان يرجع تاني لحالته بعد عرض النتيجة
 

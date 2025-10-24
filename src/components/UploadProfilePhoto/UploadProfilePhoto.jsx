@@ -20,7 +20,6 @@ export default function changePasswordModal() {
   }
 
   function handleUploadPhoto(values){
-   //console.log(values?.photo[0]);
    let myData = new FormData()
    myData.append('photo', values?.photo[0])
 
@@ -31,11 +30,9 @@ export default function changePasswordModal() {
     }
    })
    .then((res)=>{
-    console.log(res);
     
    })
    .catch((err)=>{
-    console.log(err?.response?.data?.error);
     
    })
   }

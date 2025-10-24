@@ -10,7 +10,6 @@ import PostComment from '../PostComment/PostComment';
 export default function postDetails() {
 
   let {id} = useParams();
-  console.log(id);
 
   function getSinglePost(){
     return axios.get(`https://linked-posts.routemisr.com/posts/${id}`,{
@@ -25,7 +24,6 @@ export default function postDetails() {
     queryFn : getSinglePost,
     select : (data)=> data.data.post
   });
-  console.log(data);
   
   
   return (
