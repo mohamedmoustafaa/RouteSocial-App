@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from './uploadProfilePhoto.module.css'
+import style from './UploadProfilePhoto.module.css'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './postDetails.module.css'
+import style from './PostDetails.module.css'
 import { useParams } from 'react-router-dom' //عشان استدعي اي حاجة من الurl 
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios'

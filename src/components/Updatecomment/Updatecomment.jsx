@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from './updatecomment.module.css'
+import style from './Updatecomment.module.css'
 import { useQueryClient } from '@tanstack/react-query';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
