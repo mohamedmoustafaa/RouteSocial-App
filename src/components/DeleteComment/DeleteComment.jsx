@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './deleteComment.module.css'
+import style from './DeleteComment.module.css'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { useQueryClient } from '@tanstack/react-query'

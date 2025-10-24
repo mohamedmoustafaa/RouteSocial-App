@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from './createUserComment.module.css'
+import style from './CreateUserComment.module.css'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import toast from 'react-hot-toast';
